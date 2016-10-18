@@ -1,6 +1,6 @@
 package _06.singleton.billpugh;
 
-public class SingletonTest6 {
+public class SingletonBillPughTest {
 
 	public static void main(String[] args) {
 

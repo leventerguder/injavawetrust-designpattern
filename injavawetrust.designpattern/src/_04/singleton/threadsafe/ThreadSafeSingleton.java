@@ -5,11 +5,10 @@ public class ThreadSafeSingleton {
 	private static ThreadSafeSingleton instance;
 
 	private ThreadSafeSingleton() {
-		// Enforce noninstantiability with a private constructor
-		// Effective Java , Item 4 Joshua Bloch		
-		throw new RuntimeException();
+
 	}
 
+	// Thread Safe
 	public static synchronized ThreadSafeSingleton getInstance() {
 		if (instance == null) {
 			instance = new ThreadSafeSingleton();

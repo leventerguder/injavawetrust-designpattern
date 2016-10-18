@@ -1,6 +1,6 @@
 package _04.singleton.threadsafe;
 
-public class SingletonTest4 {
+public class ThreadSafeSingletonTest {
 
 	public static void main(String[] args) {
 

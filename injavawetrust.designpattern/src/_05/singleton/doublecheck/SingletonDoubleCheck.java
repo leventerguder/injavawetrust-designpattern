@@ -5,9 +5,7 @@ public class SingletonDoubleCheck {
 	private static SingletonDoubleCheck instance;
 
 	private SingletonDoubleCheck() {
-		// Enforce noninstantiability with a private constructor
-		// Effective Java , Item 4 Joshua Bloch		
-		throw new RuntimeException();
+
 	}
 
 	public static SingletonDoubleCheck getInstance() {

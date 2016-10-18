@@ -1,6 +1,6 @@
 package _03.singleton.lazy.initialization;
 
-public class SingletonTest3 {
+public class LazyInitializationTest {
 
 	public static void main(String[] args) {
 

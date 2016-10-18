@@ -1,6 +1,6 @@
 package _07.singleton.joshuabloch;
 
-public class SingletonTest7 {
+public class JoshuaBlochSingletonTest {
 
 	public static void main(String[] args) {
 

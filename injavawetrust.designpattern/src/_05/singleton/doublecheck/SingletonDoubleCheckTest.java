@@ -1,6 +1,6 @@
 package _05.singleton.doublecheck;
 
-public class SingletonTest5 {
+public class SingletonDoubleCheckTest {
 
 	public static void main(String[] args) {
 

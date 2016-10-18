@@ -3,9 +3,7 @@ package _06.singleton.billpugh;
 public class SingletonBillPugh {
 
 	private SingletonBillPugh() {
-		// Enforce noninstantiability with a private constructor
-		// Effective Java , Item 4 Joshua Bloch		
-		throw new RuntimeException();
+		
 	}
 
 	private static class SingletonHelper {
