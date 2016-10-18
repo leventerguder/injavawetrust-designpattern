@@ -1,6 +1,6 @@
 package _02.singleton.staticblock.initialization;
 
-public class SingletonTest2 {
+public class StaticBlockInitializationTest {
 
 	public static void main(String[] args) {
 

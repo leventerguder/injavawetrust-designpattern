@@ -4,7 +4,7 @@ public class StaticBlockInitialization {
 
 	private StaticBlockInitialization() {
 		// Enforce noninstantiability with a private constructor
-		// Effective Java , Item 4 Joshua Bloch		
+		// Effective Java , Item 4, Joshua Bloch		
 		throw new RuntimeException();
 	}
 
@@ -22,8 +22,3 @@ public class StaticBlockInitialization {
 		return instance;
 	}
 }
-
-
-// Static Block Initialization yaklasimi Eager Initialization yaklasimina benzer.
-// Arti yon olarak exception handling mekanizmasini kullanabiliriz.
-// Eager yaklasiminda oldugu gibi yine gereksiz yere obje olusacaktir.
