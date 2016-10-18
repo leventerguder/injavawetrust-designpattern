@@ -1,6 +1,6 @@
 package _01.singleton.eager.initialization;
 
-public class SingletonTest1 {
+public class EagerInitializationTest {
 
 	public static void main(String[] args) {
 		
