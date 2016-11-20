@@ -21,13 +21,16 @@ public class CarFactory {
 			return null;
 		}
 
-		// if ("fiat".equals(brand)) {
+		//we can use switch-case or if-else
+		
+		// if (CarBrand.FIAT == brand) {
 		// return new Fiat();
-		// } else if ("ford".equals(brand)) {
+		// } else if (CarBrand.FORD == brand) {
 		// return new Ford();
-		// } else if ("honda".equals(brand)) {
+		// } else if (CarBrand.HONDA == brand) {
 		// return new Honda();
-		// }
+		// } else {
 		// return null;
+		// }
 	}
 }
