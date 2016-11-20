@@ -8,7 +8,7 @@ import _02.factory.method.pattern.model.Honda;
 
 public class CarFactory {
 
-	public static Car getCar(CarBrand brand) {
+	public static Car getCarInstance(CarBrand brand) {
 
 		switch (brand) {
 		case FIAT:
