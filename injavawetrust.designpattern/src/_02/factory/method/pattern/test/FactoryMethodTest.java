@@ -2,25 +2,29 @@ package _02.factory.method.pattern.test;
 
 import _02.factory.method.pattern.factory.CarFactory;
 import _02.factory.method.pattern.model.Car;
-import _02.factory.method.pattern.model.CarBrand;
+import _02.factory.method.pattern.model.CarType;
 
 public class FactoryMethodTest {
 
 	public static void main(String[] args) {
 
-		Car fiat = CarFactory.getCarInstance(CarBrand.FIAT);
-		System.out.println(fiat.getModel());
-		System.out.println(fiat.getPrice());
+		Car sedan = CarFactory.getCarInstance(CarType.SEDAN);
+		System.out.println(sedan.getModel());
+		System.out.println(sedan.getPrice());
+		sedan.speedUp();
 		System.out.println();
 
-		Car ford = CarFactory.getCarInstance(CarBrand.FORD);
-		System.out.println(ford.getModel());
-		System.out.println(ford.getPrice());
+		Car hatchback = CarFactory.getCarInstance(CarType.HATCHBACK);
+		System.out.println(hatchback.getModel());
+		System.out.println(hatchback.getPrice());
+		hatchback.speedUp();
 		System.out.println();
 
-		Car honda = CarFactory.getCarInstance(CarBrand.HONDA);
-		System.out.println(honda.getModel());
-		System.out.println(honda.getPrice());
+		Car stationWagon = CarFactory.getCarInstance(CarType.STATION_WAGON);
+		System.out.println(stationWagon.getModel());
+		System.out.println(stationWagon.getPrice());
+		stationWagon.speedUp();
 		System.out.println();
+
 	}
 }

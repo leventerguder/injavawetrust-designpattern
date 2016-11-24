@@ -1,36 +1,37 @@
 package _02.factory.method.pattern.factory;
 
 import _02.factory.method.pattern.model.Car;
-import _02.factory.method.pattern.model.CarBrand;
-import _02.factory.method.pattern.model.Fiat;
-import _02.factory.method.pattern.model.Ford;
-import _02.factory.method.pattern.model.Honda;
+import _02.factory.method.pattern.model.CarType;
+import _02.factory.method.pattern.model.Hatchback;
+import _02.factory.method.pattern.model.Sedan;
+import _02.factory.method.pattern.model.StationWagon;
 
 public class CarFactory {
 
-	public static Car getCarInstance(CarBrand brand) {
+	public static Car getCarInstance(CarType carType) {
 
-		switch (brand) {
-		case FIAT:
-			return new Fiat();
-		case FORD:
-			return new Ford();
-		case HONDA:
-			return new Honda();
+		switch (carType) {
+		case HATCHBACK:
+			return new Hatchback();
+		case SEDAN:
+			return new Sedan();
+		case STATION_WAGON:
+			return new StationWagon();
 		default:
 			return null;
 		}
-
-		//we can use switch-case or if-else
 		
-		// if (CarBrand.FIAT == brand) {
-		// return new Fiat();
-		// } else if (CarBrand.FORD == brand) {
-		// return new Ford();
-		// } else if (CarBrand.HONDA == brand) {
-		// return new Honda();
-		// } else {
-		// return null;
-		// }
+		// we can use switch-case or if-else
+
+//		if (CarType.HATCHBACK == carType) {
+//			return new Hatchback();
+//		} else if (CarType.SEDAN == carType) {
+//			return new Sedan();
+//		} else if (CarType.STATION_WAGON == carType) {
+//			return new StationWagon();
+//		} else {
+//			return null;
+//		}
+
 	}
 }

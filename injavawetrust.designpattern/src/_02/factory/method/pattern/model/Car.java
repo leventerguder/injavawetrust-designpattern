@@ -5,5 +5,7 @@ public interface Car {
 	public String getModel();
 
 	public double getPrice();
+	
+	public void speedUp();
 
 }
