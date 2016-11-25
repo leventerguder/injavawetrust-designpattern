@@ -9,13 +9,11 @@ public class Sedan implements Car {
 
 	@Override
 	public double getPrice() {
-		// TODO Auto-generated method stub
 		return 2000;
 	}
 
 	@Override
 	public void speedUp() {
-
 		System.out.println("Sedan#speedUp");
 	}
 
