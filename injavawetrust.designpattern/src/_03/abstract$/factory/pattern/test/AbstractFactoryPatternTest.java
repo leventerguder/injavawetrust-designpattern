@@ -19,7 +19,15 @@ public class AbstractFactoryPatternTest {
         Wheel wheel = wheelFactory.getWheelInstance(WheelType.ALLOY);
         
         
-        System.out.println(engine);
-        System.out.println(wheel);
+        System.out.println(engine.getEngineModel());
+        System.out.println(wheel.getPrice());
+        
+        //
+        engine = engineFactory.getEngineInstance(EngineType.L);
+        wheel = wheelFactory.getWheelInstance(WheelType.WIRE);
+        
+        
+        System.out.println(engine.getEngineModel());
+        System.out.println(wheel.getPrice());
     }
 }
