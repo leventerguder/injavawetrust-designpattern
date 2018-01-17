@@ -1,7 +1,11 @@
-package _05.prototype.shapes;
+package _05.prototype.shapes.demo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import _05.prototype.shapes.Circle;
+import _05.prototype.shapes.Rectangle;
+import _05.prototype.shapes.Shape;
 
 public class Demo {
 	
@@ -17,6 +21,8 @@ public class Demo {
 
 		Circle anotherCircle = (Circle) circle.clone();
 		shapes.add(anotherCircle);
+		
+		System.out.println(circle.equals(anotherCircle));
 
 		Rectangle rectangle = new Rectangle();
 		rectangle.width = 10;
