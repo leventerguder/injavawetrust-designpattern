@@ -1,4 +1,4 @@
-package ch01.examples.v4;
+package ch01.examples.v5;
 
 public class MuteQuack implements QuackBehavior{
 

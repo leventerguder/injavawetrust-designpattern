@@ -1,0 +1,13 @@
+
+##### Integrating the Duck Behavior #####
+The key is that a Duck will now delegate its flying and quacking behavior , 
+instead of using quacking and flying methods defined in the Duck class (or subclass)
+
+1 - First we'll add two instance variables to the Duck class callsed flyBehavir and quackBehavior
+that are declared as the interface type.
+Each duck object will set these variables polymorphically to reference the specifi behavior type it would like at runtime
+
+We'll also remove the fly() and quack() methods from the Duck class (and any subclasses)
+because we have moved this behavior out into the FlyBehavior and QuackBehavior classes.
+
+We'll replace fly() and quack() in the Duck class with two similar methods , called performFly() and performQuack()

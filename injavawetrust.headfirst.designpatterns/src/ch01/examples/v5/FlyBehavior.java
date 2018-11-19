@@ -1,4 +1,4 @@
-package ch01.examples.v4;
+package ch01.examples.v5;
 
 // The interface that all flying behavior classes implement.
 public interface FlyBehavior {
