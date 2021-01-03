@@ -2,8 +2,8 @@ package _02.factory_method.buttons;
 
 public interface Button {
 
-	public void render();
+    public void render();
 
-	public void onClick();
-	
+    public void onClick();
+
 }

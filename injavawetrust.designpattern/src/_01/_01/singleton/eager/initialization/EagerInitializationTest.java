@@ -2,11 +2,11 @@ package _01._01.singleton.eager.initialization;
 
 public class EagerInitializationTest {
 
-	public static void main(String[] args) {
-		
-		EagerInitialization instance1 = EagerInitialization.getInstance();
-		EagerInitialization instance2 = EagerInitialization.getInstance();
+    public static void main(String[] args) {
 
-		System.out.println(instance1 == instance2);
-	}
+        EagerInitialization instance1 = EagerInitialization.getInstance();
+        EagerInitialization instance2 = EagerInitialization.getInstance();
+
+        System.out.println(instance1 == instance2);
+    }
 }

@@ -5,5 +5,5 @@ package _03.abstract_method.checkboxes;
  */
 
 public interface Checkbox {
-	public abstract void paint();
+    public abstract void paint();
 }

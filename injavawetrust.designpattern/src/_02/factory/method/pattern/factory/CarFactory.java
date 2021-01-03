@@ -8,20 +8,20 @@ import _02.factory.method.pattern.model.StationWagon;
 
 public class CarFactory {
 
-	public static Car getCarInstance(CarType carType) {
+    public static Car getCarInstance(CarType carType) {
 
-		switch (carType) {
-		case HATCHBACK:
-			return new Hatchback();
-		case SEDAN:
-			return new Sedan();
-		case STATION_WAGON:
-			return new StationWagon();
-		default:
-			return null;
-		}
-		
-		// we can use switch-case or if-else
+        switch (carType) {
+            case HATCHBACK:
+                return new Hatchback();
+            case SEDAN:
+                return new Sedan();
+            case STATION_WAGON:
+                return new StationWagon();
+            default:
+                return null;
+        }
+
+        // we can use switch-case or if-else
 
 //		if (CarType.HATCHBACK == carType) {
 //			return new Hatchback();
@@ -33,5 +33,5 @@ public class CarFactory {
 //			return null;
 //		}
 
-	}
+    }
 }

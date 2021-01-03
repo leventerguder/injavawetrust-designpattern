@@ -3,6 +3,7 @@ package _02.factory_method.test;
 import _02.factory_method.factory.Dialog;
 import _02.factory_method.factory.HtmlDialog;
 import _02.factory_method.factory.WindowsDialog;
+
 /**
  * Demo class. Everything comes together here.
  */
@@ -19,7 +20,7 @@ public class TestFactory {
      * environment options.
      */
     static void configure() {
-    	System.out.println(System.getProperty("os.name"));
+        System.out.println(System.getProperty("os.name"));
         if (System.getProperty("os.name").equals("Mac OS X")) {
             dialog = new WindowsDialog();
         } else {

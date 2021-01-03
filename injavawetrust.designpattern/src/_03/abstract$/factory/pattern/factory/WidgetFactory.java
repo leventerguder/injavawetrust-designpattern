@@ -5,8 +5,8 @@ import _03.abstract$.factory.pattern.model.Window;
 
 public interface WidgetFactory {
 
-	public abstract ScrollBar createScrollBar();
+    public abstract ScrollBar createScrollBar();
 
-	public abstract Window createWindow();
+    public abstract Window createWindow();
 
 }

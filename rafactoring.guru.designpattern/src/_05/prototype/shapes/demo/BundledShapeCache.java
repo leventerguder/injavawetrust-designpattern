@@ -8,18 +8,18 @@ import _05.prototype.shapes.Rectangle;
 import _05.prototype.shapes.Shape;
 
 public class BundledShapeCache {
-	
+
     private Map<String, Shape> cache = new HashMap<>();
 
     public BundledShapeCache() {
-    	
+
         Circle circle = new Circle();
         circle.x = 5;
         circle.y = 7;
         circle.radius = 45;
         circle.color = "Green";
 
-		Rectangle rectangle = new Rectangle();
+        Rectangle rectangle = new Rectangle();
         rectangle.x = 6;
         rectangle.y = 9;
         rectangle.width = 8;

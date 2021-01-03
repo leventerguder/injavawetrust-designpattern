@@ -8,46 +8,46 @@ import _05.prototype.shapes.Rectangle;
 import _05.prototype.shapes.Shape;
 
 public class Demo {
-	
-	public static void main(String[] args) {
-		List<Shape> shapes = new ArrayList<>();
-		List<Shape> shapesCopy = new ArrayList<>();
 
-		Circle circle = new Circle();
-		circle.x = 10;
-		circle.y = 20;
-		circle.radius = 15;
-		shapes.add(circle);
+    public static void main(String[] args) {
+        List<Shape> shapes = new ArrayList<>();
+        List<Shape> shapesCopy = new ArrayList<>();
 
-		Circle anotherCircle = (Circle) circle.clone();
-		shapes.add(anotherCircle);
-		
-		System.out.println(circle.equals(anotherCircle));
+        Circle circle = new Circle();
+        circle.x = 10;
+        circle.y = 20;
+        circle.radius = 15;
+        shapes.add(circle);
 
-		Rectangle rectangle = new Rectangle();
-		rectangle.width = 10;
-		rectangle.height = 20;
-		shapes.add(rectangle);
+        Circle anotherCircle = (Circle) circle.clone();
+        shapes.add(anotherCircle);
 
-		cloneAndCompare(shapes, shapesCopy);
-	}
+        System.out.println(circle.equals(anotherCircle));
 
-	private static void cloneAndCompare(List<Shape> shapes, List<Shape> shapesCopy) {
-		for (Shape shape : shapes) {
-			shapesCopy.add(shape.clone());
-		}
+        Rectangle rectangle = new Rectangle();
+        rectangle.width = 10;
+        rectangle.height = 20;
+        shapes.add(rectangle);
 
-		for (int i = 0; i < shapes.size(); i++) {
-			if (shapes.get(i) != shapesCopy.get(i)) {
-				System.out.println(i + ": Shapes are different objects (yay!)");
-				if (shapes.get(i).equals(shapesCopy.get(i))) {
-					System.out.println(i + ": And they are identical (yay!)");
-				} else {
-					System.out.println(i + ": But they are not identical (booo!)");
-				}
-			} else {
-				System.out.println(i + ": Shape objects are the same (booo!)");
-			}
-		}
-	}
+        cloneAndCompare(shapes, shapesCopy);
+    }
+
+    private static void cloneAndCompare(List<Shape> shapes, List<Shape> shapesCopy) {
+        for (Shape shape : shapes) {
+            shapesCopy.add(shape.clone());
+        }
+
+        for (int i = 0; i < shapes.size(); i++) {
+            if (shapes.get(i) != shapesCopy.get(i)) {
+                System.out.println(i + ": Shapes are different objects (yay!)");
+                if (shapes.get(i).equals(shapesCopy.get(i))) {
+                    System.out.println(i + ": And they are identical (yay!)");
+                } else {
+                    System.out.println(i + ": But they are not identical (booo!)");
+                }
+            } else {
+                System.out.println(i + ": Shape objects are the same (booo!)");
+            }
+        }
+    }
 }

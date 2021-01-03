@@ -1,9 +1,10 @@
 
-##### Welcome to Design Patterns ##### 
+## Welcome to Design Patterns ##
 
 Someone has already solved your problems.
 The best way to use patterns is to load your brain with them and then recognize places in your designs 
 and existing applications where you can apply them.
+Instead of code reuse , with pattern you get experience reuse.
 
 
 HAS-A can be better than IS-A

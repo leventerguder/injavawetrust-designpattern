@@ -6,7 +6,7 @@ public class Demo2 {
     public static void main(String[] args) {
         BundledShapeCache cache = new BundledShapeCache();
 
-		Shape shape1 = cache.get("Big green circle");
+        Shape shape1 = cache.get("Big green circle");
         Shape shape2 = cache.get("Medium blue rectangle");
         Shape shape3 = cache.get("Medium blue rectangle");
 
