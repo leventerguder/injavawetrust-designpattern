@@ -2,7 +2,7 @@ package ch01.examples.v4;
 
 public abstract class Duck {
 
-    // The key is that a Duck will now delegate its flying and quacking behavior ,
+     // The key is that a Duck will now delegate its flying and quacking behavior ,
     // instead of using quacking and flying methods defined in the Duck class (or
     // subclass)
 
@@ -15,7 +15,7 @@ public abstract class Duck {
     public abstract void display();
 
     // These methods replace fly() and quack()
-    public void perfomFly() {
+    public void performFly() {
         flyBehavior.fly();
     }
 
@@ -26,4 +26,8 @@ public abstract class Duck {
     }
 
     // other duck-like methods...
+
+    public void swim(){
+        System.out.println("All ducks float , even decoys !");
+    }
 }
