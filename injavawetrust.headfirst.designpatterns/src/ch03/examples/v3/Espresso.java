@@ -1,6 +1,6 @@
-package ch03.notes.v1;
+package ch03.examples.v3;
 
-public class Espresso extends Beverage{
+public class Espresso extends Beverage {
 
     public  Espresso()
     {

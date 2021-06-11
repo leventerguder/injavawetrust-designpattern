@@ -1,4 +1,4 @@
-package ch03.notes.v1;
+package ch03.examples.v1;
 
 public class Whip  extends CondimentDecorator {
 
