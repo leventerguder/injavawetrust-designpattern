@@ -48,3 +48,35 @@ The third reason is that the goalposts move. Your client was delighted with the 
 There is a bright side : if someone asks you yo change something in your app, that means someone stil cares about it.
 
 That is why all seasoned developers try to provide for possible future changes when designing an application's architecture.
+
+## Design Principles
+
+What is good software design ? How would you measure it ? What practices would you need to follow to achieve it ? How can you make your architecture flexible , stable and easy to understand ? 
+
+These are the great questions; but, unfortunately , the answers are different depending on the type of application you're building. Nevertheless, there are sevral universal princinples of software design that might help you answer these questions for your own project. Most of the design patterns listed in this books are based on these principles.
+
+## Encapsulate What Varies
+
+Identify the aspects of your application that vary and separate them from what stays the same.
+
+The main goal of this principle is to minimize the effect caused by changes.
+Imagine that your program is a ship, and changes are hideous mines that linger under water.
+Struck by the mine, the ship sinks.
+
+Knowing this, you can divide the ship’s hull into independent compartments that can be safely sealed to limit damage to a single compartment. Now, if the ship hits a mine, the ship as a whole remains afloat.
+
+In the same way, you can isolate the parts of the program that vary in independent modules, protecting the rest of the code from adverse effects. As a result, you spend less time getting the program back into working shape, implementing and testing the changes. The less time you spend making changes, the more time you have for implementing features.
+
+### Encapsulation on a method level
+
+Say you’re making an e-commerce website. Somewhere in your code, there’s a getOrderTotal method that calculates a grand total for the order, including taxes.
+
+We can anticipate that tax-related code might need to change in the future. The tax rate depends on the country, state or even city where the customer resides, and the actual formula may change over time due to new laws or regulations. As a result, you’ll need to change the getOrderTotal method quite often. But even the method’s name suggests that it doesn’t care about how the tax is calculated.
+
+You can extract the tax calculation logic into a separate method, hiding it from the original method.
+Tax-related changes become isolated inside a single method. Moreover, if the tax calculation logic becomes too complicat- ed, it’s now easier to move it to a separate class.
+
+### Encapsulation on a class level
+
+Over time you might add more and more responsibilities to a method which used to do a simple thing. These added behaviors often come with their own helper fields and methods that eventually blur the primary responsibility of the containing class. Extracting everything to a new class might make things much more clear and simple.
+
