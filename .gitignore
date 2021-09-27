@@ -1,0 +1,12 @@
+/bin/
+.idea/modules.xml
+.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+.idea/sonarlint/issuestore/index.pb
+.idea/vcs.xml
+.idea/workspace.xml
+/target/
+
+*.class
+injavawetrust.designpattern/.idea/misc.xml
+injavawetrust.designpattern/.idea/modules.xml
+injavawetrust.designpattern/.idea/vcs.xml

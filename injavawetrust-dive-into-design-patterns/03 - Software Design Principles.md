@@ -80,3 +80,43 @@ Tax-related changes become isolated inside a single method. Moreover, if the tax
 
 Over time you might add more and more responsibilities to a method which used to do a simple thing. These added behaviors often come with their own helper fields and methods that eventually blur the primary responsibility of the containing class. Extracting everything to a new class might make things much more clear and simple.
 
+
+## Program to an Interface, not an Implementation
+
+Program to an interface, not an implementation. Depend on abstractions, not on concrete classes.
+
+You can tell that the design is flexible enough if you can easily extend it without breaking any existing code. 
+
+When you want to make two classes collaborate, you start by making one of them dependent on the other.
+
+- Determine what exactly one object needs from the other: which methods does it execute?
+- Describe these methods in a new interface or abstract class.
+- Make the class that is a dependency implement this interface.
+- Now make the second class dependent on this interface rather than on the concrete class. You still can make it work with objects of the original class, but the connection is now much more flexible.
+
+
+## Favor Composition Over Inheritance
+
+Inheritance is probably the most obvious and easy way of reusing code between classes. You have two classes with the same code. Create a common base class for these two and move the similar code into it. Piece of cake!
+
+Unfortunately, inheritance comes with caveats that often become apparent only after your program already has tons of classes and changing anything is pretty hard.
+
+- A subclass can't reduce the interface of the superclass.
+You have to implement all abstract methods of the parent class even if you wont't be using them.
+
+- When overriding methods you need to make sure that the new behavior is compatible with the base one.
+It’s important because objects of the subclass may be passed to any code that expects objects of the superclass and you don’t want that code to break.
+
+- Inheritance breaks encapsulation of the superclass
+The internal details of the parent class become available to the subclass. There might be an opposite situation where a programmer makes a superclass aware of some details of sub- classes for the sake of making further extension easier.
+
+- Subclasses are tightly coupled to superclasses.
+Any changes in a superclass may break the functionality of subclasses.
+
+- Trying to reuse code through inheritance can lead to creating parallel inheritance hierarchies
+
+Inheritance usually takes place in a single dimension. But whenever there are two or more dimensions , you have to create lots of class combinations, bloating the class hierarchy to a ridiculous size.
+
+There’s an alternative to inheritance called composition. Whereas inheritance represents the "is a" relationship between classes (a car is a transport), composition represents the “has a” relationship (a car has an engine).
+
+I should mention that this principle also applies to Aggregation - a more relaxed variant of composition where one object may have a reference to the other one but doesn't manage its lifecycle. Here's an example : a car has a driver , but he or she may use another car or just walk without the car.
