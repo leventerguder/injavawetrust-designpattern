@@ -61,5 +61,52 @@ In most modern programming languages, especially sta- tically typed ones (Java, 
 
 For example, the base method has a parameter with type int . If a subclass overrides this method and requires that the value of an argument passed to the method should be positive (by throwing an exception if the value is negative), this strengthens the preconditions. The client code, which used to work fine when passing negative numbers into the method, now breaks if it starts working with an object of this subclass.
 
+- A subclass shouldn’t weaken post-conditions
+
+Say you have a class with a method that works with a database. A method of the class is supposed to always close all opened database con- nections upon returning a value.
+You created a subclass and changed it so that database connections remain open so you can reuse them. But the client might not know anything about your intentions. Because it expects the methods to close all the connections, it may simply terminate the program right after calling the method, pol- luting a system with ghost database connections.
+
+- Invariants of a superclass must be preserved
+
+This is probably the least formal rule of all. Invariants are conditions in which an object makes sense.
+
+The rule on invariants is the easiest to violate because you might misunderstand or not realize all of the invariants of a complex class. Therefore, the safest way to extend a class is to introduce new fields and methods, and not mess with any existing members of the superclass. Of course, that’s not always doable in real life.
+
+- A subclass shouldn’t change values of private fields of the superclass.
+
+What? How’s that even possible? It turns out some programming languages let you access private members of a class via reflection mechanisms. Other languages (Python, JavaScript) don’t have any protection for the private members at all.
+
+## Interface Segregation Princinple
+
+Client should'nt be forced to depend on methods they do not use.
+
+Try to make your interfaces narrow enough that client classes don't have to implement behaviors they don't need.
+
+According to the interface segregation principle, you should break down "fat" interfaces into more granular and specific ones. Clients should implement only those methods that they really need. Otherwise, a change to a "fat" interface would break even clients that don’t use the changed methods.
 
 
+Class inheritance lets a class have just one superclass, but it doesn’t limit the number of interfaces that the class can implement at the same time. Hence, there’s no need to cram tons of unrelated methods to a single interface.
+Break it down into several more refined interfaces you can implement them all in a single class if needed. However, some classes may be fine with implementing just one of them.
+
+## Dependency Inversion Princinple
+
+High-level classes shouldn't depend on low-level classes. Both should depend on abstractions. Abstractions shouldn't depend on low-level classes. Abstractions shouldn't depend on details. Details should depend on abstractions.
+
+Usually when designing software, you can make a distinction between two levels of classes.
+
+Low-level classes implement basic operations such as working with a disk, transferring data over a network, connecting to a database, etc.
+
+High-level classes contain complex business logic that directs low-level classes to do something.
+
+Sometimes people design low-level classes first and only then start working on high-level ones. This is very common when you start developing a prototype on a new system, and you’re not even sure what’s possible at the higher level because low-level stuff isn’t yet implemented or clear. With such an approach business logic classes tend to become dependent on primitive low-level classes.
+
+- For starters, you need to describe interfaces for low-level operations that high-level classes rely on, preferably in business terms. For instance, business logic should call a method openReport(file) rather than a series of methods
+openFile(x) , readBytes(n) , closeFile(x) . These interfaces count as high-level ones.
+
+- Now you can make high-level classes dependent on those interfaces, instead of on concrete low-level classes. This dependency will be much softer than the original one.
+
+- Once low-level classes implement these interfaces, they become dependent on the business logic level, reversing the direction of the original dependency.
+
+The dependency inversion principle often goes along with the open/closed principle: you can extend low-level classes to use with different business logic classes without breaking existing classes.
+
+As a result, the direction of the original dependency has been inverted: low-level classes are now dependent on high-level abstractions.
