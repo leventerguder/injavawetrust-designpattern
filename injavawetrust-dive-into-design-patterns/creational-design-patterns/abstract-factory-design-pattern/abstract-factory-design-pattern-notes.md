@@ -51,3 +51,18 @@ Abstract Factory returns the product immediately, whereas Builder lets you run s
 - You can use Abstract Factory along with Bridge. This pairing is useful when some abstractions defined by Bridge can only with specific implementations.
 In this case, Abstract Factory can encapsulate these relations and hide the complexity from the client code.
 - Abstract Factories , Builders and Prototypes can all be implemented as Singletons.
+
+## Usage of the pattern in Java
+
+The Abstract Factory pattern is pretty common in Java code. Many frameworks and libraries use it to provide a way to extend and customize their standard components.
+
+Here are some examples  from core Java libraries:
+
+- javax.xml.parsers.DocumentBuilderFactory#newInstance()
+- javax.xml.transform.TransformerFactory#newInstance()
+- javax.xml.xpath.XPathFactory#newInstance()
+
+The pattern is easy to recognize by methods, which return a factory object. Then, the factory is used for creating specific sub-components.
+
+
+
