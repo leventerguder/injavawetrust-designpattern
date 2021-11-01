@@ -1,8 +1,8 @@
-package _05.prototype.shapes;
+package prototype;
 
 public class Circle extends Shape {
 
-    public int radius;
+    private int radius;
 
     public Circle() {
     }
@@ -21,9 +21,16 @@ public class Circle extends Shape {
 
     @Override
     public boolean equals(Object object2) {
-        if (!(object2 instanceof Circle) || !super.equals(object2))
-            return false;
+        if (!(object2 instanceof Circle) || !super.equals(object2)) return false;
         Circle shape2 = (Circle) object2;
         return shape2.radius == radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 }

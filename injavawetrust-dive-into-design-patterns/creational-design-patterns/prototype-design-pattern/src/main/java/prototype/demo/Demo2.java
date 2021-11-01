@@ -1,8 +1,9 @@
-package _05.prototype.shapes.demo;
+package prototype.demo;
 
-import _05.prototype.shapes.Shape;
+import prototype.Shape;
 
 public class Demo2 {
+
     public static void main(String[] args) {
         BundledShapeCache cache = new BundledShapeCache();
 

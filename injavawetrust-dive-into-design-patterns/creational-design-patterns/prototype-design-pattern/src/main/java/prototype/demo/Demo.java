@@ -1,11 +1,11 @@
-package _05.prototype.shapes.demo;
+package prototype.demo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import _05.prototype.shapes.Circle;
-import _05.prototype.shapes.Rectangle;
-import _05.prototype.shapes.Shape;
+import prototype.Circle;
+import prototype.Rectangle;
+import prototype.Shape;
 
 public class Demo {
 
@@ -14,9 +14,9 @@ public class Demo {
         List<Shape> shapesCopy = new ArrayList<>();
 
         Circle circle = new Circle();
-        circle.x = 10;
-        circle.y = 20;
-        circle.radius = 15;
+        circle.setX(10);
+        circle.setY(20);
+        circle.setRadius(15);
         shapes.add(circle);
 
         Circle anotherCircle = (Circle) circle.clone();
@@ -25,8 +25,8 @@ public class Demo {
         System.out.println(circle.equals(anotherCircle));
 
         Rectangle rectangle = new Rectangle();
-        rectangle.width = 10;
-        rectangle.height = 20;
+        rectangle.setWidth(10);
+        rectangle.setHeight(20);
         shapes.add(rectangle);
 
         cloneAndCompare(shapes, shapesCopy);

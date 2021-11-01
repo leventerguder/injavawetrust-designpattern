@@ -1,11 +1,11 @@
-package _05.prototype.shapes.demo;
+package prototype.demo;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import _05.prototype.shapes.Circle;
-import _05.prototype.shapes.Rectangle;
-import _05.prototype.shapes.Shape;
+import prototype.Circle;
+import prototype.Rectangle;
+import prototype.Shape;
 
 public class BundledShapeCache {
 
@@ -14,17 +14,17 @@ public class BundledShapeCache {
     public BundledShapeCache() {
 
         Circle circle = new Circle();
-        circle.x = 5;
-        circle.y = 7;
-        circle.radius = 45;
-        circle.color = "Green";
+        circle.setX(5);
+        circle.setY(7);
+        circle.setRadius(45);
+        circle.setColor("Green");
 
         Rectangle rectangle = new Rectangle();
-        rectangle.x = 6;
-        rectangle.y = 9;
-        rectangle.width = 8;
-        rectangle.height = 10;
-        rectangle.color = "Blue";
+        rectangle.setX(6);
+        rectangle.setY(9);
+        rectangle.setWidth(8);
+        rectangle.setHeight(10);
+        rectangle.setColor("Blue");
 
         cache.put("Big green circle", circle);
         cache.put("Medium blue rectangle", rectangle);
