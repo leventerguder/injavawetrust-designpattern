@@ -14,6 +14,8 @@ Remember those global variables that you used to store some essential objects ?
 While they're very handy, they're also very unsafe since any code can potentially overwrite the contents of those 
 variables and crash the app.
 
+Singleton hs almost the same pros and const as global variables. Although 
+
 ## Solution
 
 All implementations of the Singleton have these 2 steps in common:
@@ -54,3 +56,15 @@ But there are two fundamental differences between these patterns:
   - There should be only one Singleton instance, whereas a Flyweight class can have multiple instances with different intrinsic states.
   - The Singleton object can be mutable. Flyweight objects are immutable.
 - Abstract Factories, Builders and Prototypes can all be implemented as Singletons.
+
+## Usage of the Pattern in Java
+
+A lot of developers consider the Singleton pattern an antipattern. That's why it usage is on the decline in java code.
+Despite this , there are quite alot of Singleton examples in Java core libraries.
+
+java.lang.Runtime#getRuntime()
+java.awt.Desktop#getDesktop()
+java.lang.System#getSecurityManager()
+
+Singleton can be recognized by a statis creation method, which returns the same cached object.
+
