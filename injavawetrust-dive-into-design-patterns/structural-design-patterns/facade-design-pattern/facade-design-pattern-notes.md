@@ -1,12 +1,17 @@
 # Facade Design Pattern
 
-Facade is a structrual design pattern that provides a simplified interface to a library, a framework , or any other complex
+Facade is a structural design pattern that provides a simplified interface to a library, a framework , or any other complex
 set of classes.
 
 
 A Facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts.
 A facade might provide limited functionality in comparison to working with subsystem directly.
 However, it includes only those features that clients really care about.
+
+## Identification
+
+Facade can be recognized in a class that has a simple interface, but delegates most of the work other classes.
+Usually, facades manage the full life cycle of objects they use.
 
 ## Real World Analogy
 
@@ -50,7 +55,18 @@ from the client code.
    - Mediator centralizes communication between components of the system. The components only know the mediator object
     and don't communicate directly.
 
-- A Facade clas can often be transformed into a Singleton since a single facade object is sufficient in most cases.
+- A Facade class can often be transformed into a Singleton since a single facade object is sufficient in most cases.
 
 - Facade is similar to Proxy in that both buffer a complex entity and initialize it on its own. Unlike Facade, Proxy has the same
 interface as its service object, which makes them interchangeable.
+
+## Usage Examples
+
+The Facade pattern is common used in apps written in Java. It's especially handy when working with complex libraries.
+
+javax.faces.context.FacesContext uses LifeCycle , ViewHandler, NavigationHandler classes under the hood, 
+but most clients aren't aware of that.
+
+javax.faces.context.ExternalContext uses ServletContext , HttpSession, HttpServletRequest, HttpServletResponse and others inside.
+
+
