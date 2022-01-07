@@ -5,6 +5,22 @@ Also known as : CoR , Chain of Command
 Chain of Responsibility is a behavioral design pattern that lets you pass request along a chain of handlers. Upon
 receiving a request, each handler decides either to process the request or to pass it to next handler in the chain.
 
+This pattern allows multiple objects to handle the request without coupling sender class to concrete classes of the
+receivers. The chain can be composed dynamically at runtime with any handler that follows a standard handler interface.
+
+## Usage of the pattern in Java
+
+The Chain if Responsibility pattern isn't a frequent guest in Java program since it's only relevant when code operates
+with chains of objects.
+
+javax.servlet.Filter#doFilter()
+java.util.logging.Logger#log()
+
+### Identification
+
+The pattern is recognizable by behavioral methods of one group of objects tha indirectly call the same methods in other
+projects, while all the objects follow the common interface.
+
 ## Solution
 
 Like many other behavioral design patterns, the Chain of Responsibility relies on transforming particular behaviors into
