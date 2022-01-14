@@ -12,7 +12,7 @@ snapshots.
 ## Usage of the pattern in Java
 
 The Memento's principle can be achieved using the serialization, which is quite common in Java. While it's not the only
-the most efficient way to make snapshots of an object's state, it sill allows storing state backups while protecting the
+most efficient way to make snapshots of an object's state, it still allows storing state backups while protecting the
 originator's structure from other objects.
 
 - All java.io.Serializable implementations can simulate the Memento
