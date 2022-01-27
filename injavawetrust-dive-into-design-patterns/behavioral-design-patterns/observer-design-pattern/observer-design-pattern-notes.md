@@ -5,6 +5,24 @@ Also known as : Event-Subscriber, Listener
 Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about
 any events that happen to the object they're observing.
 
+Observer is a behavioral design pattern that allows some objects to notify other objects about changes in their state.
+The observer pattern provides a way to subscribe and unsubscribe to and from these events for any object that implements
+subscriber interface.
+
+## Usage of the pattern in Java
+
+The Observer pattern is pretty common in Java code, especially in the GUI components. It provides a way to reach to
+events happening in other objects without coupling to their classes.
+
+- java.util.Observer / java.util.Observable
+- java.util.EventListener
+- javax.servlet.http.HttpSessionBindingListener
+- javax.servlet.http.HttpSessionAttributeListener
+- javax.faces.event.PhaseListener
+
+The pattern can be recognized by subscription methods, that store objects in a list and by calls to update method issued
+to objects in that list.
+
 ## Real-World Analogy
 
 If you subscribe to a newspaper or magazine, you no longer need to go to the store to check if the next issue is
@@ -60,6 +78,7 @@ The subscription list is dynamic, so subscribers can join or leave the list when
   When you’re confused, remember that you can implement the Mediator pattern in other ways. For example, you can
   permanently link all the components to the same mediator object. This implementation won’t resemble Observer but will
   still be an instance of the Mediator pattern.
+-
 
-  Now imagine a program where all components have become publishers, allowing dynamic connections between each other.
-  There won’t be a centralized mediator object, only a distributed set of observers.
+Now imagine a program where all components have become publishers, allowing dynamic connections between each other.
+There won’t be a centralized mediator object, only a distributed set of observers.
