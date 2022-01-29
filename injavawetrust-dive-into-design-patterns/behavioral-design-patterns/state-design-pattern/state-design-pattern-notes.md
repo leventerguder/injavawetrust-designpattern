@@ -3,6 +3,19 @@
 State is a behavioral design pattern that lets an object alter its behavior its internal state changes. It appears as if
 the object changed its classes.
 
+State is a behavioral design pattern that allows an object to change the behavior when its internal state changes. The
+pattern extracts state-related behaviors into separate state classes and forces the original objects to delegate the
+work to an instance of these classes, instead of acting on its own.
+
+## Usage of the pattern in Java
+
+The State pattern is commonly used in Java to convert massive switch -base state machines into the objects.
+
+- javax.faces.lifecycle.LifeCycle#execute()
+
+Identification: State pattern can be recognized by methods that change their behavior depending on the objects' state,
+controlled externally.
+
 ## Solution
 
 The State pattern suggests that you create new classes for all possible states of an object and extract all
