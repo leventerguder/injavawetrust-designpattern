@@ -11,3 +11,5 @@ https://www.amazon.com/Head-First-Design-Patterns-Object-Oriented-dp-149207800X/
 
 https://www.amazon.com/Java-Design-Patterns-Hands-Experience/dp/1484240774
 
+https://www.journaldev.com/java/design-patterns
+
