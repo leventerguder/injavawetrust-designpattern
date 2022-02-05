@@ -72,3 +72,31 @@ sample code for creating Singleton class with this approact.
 The implementation works fine in case of the single-threaded environment but when it comes to multithreaded systems, it
 can cause issues if multiple threads are inside the if condition at the same time. It will destroy the singleton pattern
 and both threads will get the different instances of the singleton class.`
+
+## Thread Safe Singleton
+
+The easier way to create a thread-safe singleton class is to make the global access method synchronized, so that only
+one thread can execute this method at a time.
+
+Implementation works fine and provides thread-safety but it reduces the performance because of cost associated with the
+synchronized method, although we need it only for the first few threads who might create the separate instances.
+
+To avoid this extra overhead every time, Double Checked Locking principle is used. In this approach , the synchronized
+block is used inside the if condition with an additional check to ensure that only one instance of singleton class is
+created.
+
+The volatile keyword ensures that multiple threads handle "instance" variable correctly when it is being initialized to
+the DoubleCheckedLocking Double Checked Locking is fixed in Java 1.5
+http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
+
+## Bill Pugh Singleton Implementation
+
+Prior Java 5, java memory model had a lot of issues and the above approaches used to fail in certain scenarios where too
+many threads try to get the instance of the Singleton class simultaneously. So, Bill Pugh came up with a different
+approach to create the Singleton class using an inner static helper class.
+
+Notice the private inner static class that contains the instance of the singleton class. When the singleton class is
+loaded, SingletonHelper class is not loaded into memory and only when someone calls the getInstance method, this class
+gets loaded and creates the Singleton class instance.
+
+This is the most widely used approach for Singleton class as it doesn't require synchronization. 
