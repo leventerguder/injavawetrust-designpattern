@@ -35,15 +35,6 @@ concepts.
 - Public static method that returns the instance of the class, this is the global access point for outer world to get
   the instance of the singleton class.
 
-1. Eager Initialization
-2. Static Block Initialization
-3. Lazy Initialization
-4. Thread Safe Singleton
-5. Bill Pugh Singleton Implementation
-6. Using Reflection to Destroy Singleton Pattern
-7. Enum Singleton
-8. Serialization and Singleton
-
 ## Eager Initialization
 
 In eager initialization, the instance of Singleton Class is created at the time of class loading, this is the easiest
@@ -99,4 +90,28 @@ Notice the private inner static class that contains the instance of the singleto
 loaded, SingletonHelper class is not loaded into memory and only when someone calls the getInstance method, this class
 gets loaded and creates the Singleton class instance.
 
-This is the most widely used approach for Singleton class as it doesn't require synchronization. 
+This is the most widely used approach for Singleton class as it doesn't require synchronization.
+
+## Using Reflection to destroy Singleton Pattern
+
+Reflection can be used to destroy all the above singleton implementation approaches. Reflection is very powerful and
+used in a lot of frameworks like Spring and Hibernate.
+
+## Enum Singleton
+
+To overcome this situation with Reflection Joshua Bloch suggests the use of Enum to implement Singleton Design pattern
+as Java ensures that any enum value is instantiated only once in a Java program.
+
+Since Java Enum values are globally accessible, so is the singleton. The drawbacks is that the enum type is somewhat
+inflexible ; for example , it does not allow lazy initialization.
+
+https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+Overcome reflection issue: To overcome issue raised by reflection, enums are used because java ensures internally that
+enum value is instantiated only once. Since java Enums are globally accessible, they can be used for singletons. Its
+only drawback is that it is not flexible i.e it does not allow lazy initialization.
+
+As enums don’t have any constructor so it is not possible for Reflection to utilize it. Enums have their by-default
+constructor, we can’t invoke them by ourself. JVM handles the creation and invocation of enum constructors internally.
+As enums don’t give their constructor definition to the program, it is not possible for us to access them by Reflection
+also. Hence, reflection can’t break singleton property in case of enums.

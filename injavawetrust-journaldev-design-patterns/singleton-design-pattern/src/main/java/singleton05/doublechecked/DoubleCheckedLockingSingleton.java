@@ -1,18 +1,18 @@
 package singleton05.doublechecked;
 
-public class DoubleCheckedLocking {
+public class DoubleCheckedLockingSingleton {
 
-    private volatile static DoubleCheckedLocking instance;
+    private volatile static DoubleCheckedLockingSingleton instance;
 
-    private DoubleCheckedLocking() {
+    private DoubleCheckedLockingSingleton() {
 
     }
 
-    public static DoubleCheckedLocking getInstance() {
+    public static DoubleCheckedLockingSingleton getInstance() {
         if (instance == null) {
-            synchronized (DoubleCheckedLocking.class) {
+            synchronized (DoubleCheckedLockingSingleton.class) {
                 if (instance == null) {
-                    instance = new DoubleCheckedLocking();
+                    instance = new DoubleCheckedLockingSingleton();
                 }
             }
         }
