@@ -115,3 +115,26 @@ As enums don’t have any constructor so it is not possible for Reflection to ut
 constructor, we can’t invoke them by ourself. JVM handles the creation and invocation of enum constructors internally.
 As enums don’t give their constructor definition to the program, it is not possible for us to access them by Reflection
 also. Hence, reflection can’t break singleton property in case of enums.
+
+## Serialization and Singleton
+
+Sometimes in distributed systems, we need to implement Serializable interface in Singleton class so that we can store
+its state in the file system and retrieve it at a later point of time.
+
+The problem with serialized singleton class is that whenever we deserialize it, it will create a new instance of the
+class.
+
+So it destroys the singleton pattern, to overcome this scenario all we need to do it provide the implementation of
+readResolve() method.
+
+https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+## Cloning and Singleton
+
+Cloning is a concept to create duplicate objects. Using clone we can create copy of object. Suppose, we create clone of
+a singleton object, then it will create a copy that is there are two instances of a singleton class, hence the class is
+no more singleton.
+
+To overcome this issue, override clone() method and throw an exception from clone method that is
+CloneNotSupportedException. Now whenever user will try to create clone of singleton object, it will throw exception and
+hence our class remains singleton.
