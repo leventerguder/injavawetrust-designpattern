@@ -11,3 +11,11 @@ public class ComputerFactory {
         return null;
     }
 }
+
+/*
+Some important points about Factory Design Pattern are;
+
+1. We can keep Factory class Singleton or we can keep the method that returns the subclass as static.
+2. Notice that based on the input parameter, different subclass is created and returned.
+
+ */
