@@ -13,6 +13,8 @@
         <module>single-responsibility-principle-done</module>
         <module>open-closed-principle-begin</module>
         <module>open-closed-principle-done</module>
+        <module>liskov-substitution-principle-begin</module>
+        <module>liskov-substitution-principle-done</module>
     </modules>
 
     <dependencies>
