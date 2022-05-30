@@ -11,6 +11,8 @@
     <modules>
         <module>single-responsibility-principle-begin</module>
         <module>single-responsibility-principle-done</module>
+        <module>open-closed-principle-begin</module>
+        <module>open-closed-principle-done</module>
     </modules>
 
     <dependencies>
