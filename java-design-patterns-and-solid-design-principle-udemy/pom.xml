@@ -19,6 +19,8 @@
         <module>interface-segregation-principle-done</module>
         <module>dependency-inversion-principle-begin</module>
         <module>dependency-inversion-principle-done</module>
+        <module>builder-design-pattern</module>
+        <module>builder-design-pattern-v2-inner-class</module>
     </modules>
 
     <dependencies>
