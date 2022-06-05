@@ -21,6 +21,7 @@
         <module>dependency-inversion-principle-done</module>
         <module>builder-design-pattern</module>
         <module>builder-design-pattern-v2-inner-class</module>
+        <module>simple-factory-design-pattern</module>
     </modules>
 
     <dependencies>
