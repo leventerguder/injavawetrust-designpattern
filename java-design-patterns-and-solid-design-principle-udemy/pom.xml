@@ -22,6 +22,7 @@
         <module>builder-design-pattern</module>
         <module>builder-design-pattern-v2-inner-class</module>
         <module>simple-factory-design-pattern</module>
+        <module>factory-method-design-pattern</module>
     </modules>
 
     <dependencies>

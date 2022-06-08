@@ -1,57 +1,49 @@
-# Simple Factory Design Pattern
+# Factory Method Design Pattern
 
-We simply move the instantiation logic to a separate class and most commonly to a static method of this class.
+- We want to move the object creation logic from our code to a separate class.
+- We use this pattern when we do not know in advance which class we may need to instantiate beforehand & also to allow
+  new
+  classes to be added to system and handle their creation without affecting client code.
+- We let subclasses decide which object to instantiate by overriding the factory method.
 
-Some do not consider simple factory to be a "design pattern", as ts simply a method that encapsulates object
-instantiation.Nothing complex goes on in that method.
+## Implement a Factory Method
 
-Simple factory as it is often confused with  "factory method" pattern.
+We start by creating a class for our creator.
 
-Typically, we want to do this if we have more than one option when instantiating object and a simple logic is used to
-choose correct class.
-
-## Implementing a Simple Factory
-
-We start by creating a separate class for our simple factory.
-
-- Add a method which returns desired object instance.
-- This method is typically static and will accept some argument to decide which class to instantiate.
-- You can also provide additional arguments which will be used to instantiate objects.
+- Creator itself can be concrete if it can provide a default object or it can be abstract.
+- Implementations will override the method and return an object.
 
 ## Implementation Considerations
 
-Simple Factory can be just a method in existing class. Adding a separate class however allows other parts of your code
-to use simple factory more easily.
+The Creator can be a concrete class & provide a default implementation for the factory method. In such cases you'll
+create some "default" object in base creator.
 
-Simple Factory itself doesn't need any state tracking so it's best to keep this as a static method.
+You can also use the simple factory way of accepting additional arguments to choose between different object types.
+Subclasses can then override factory method to selectively create different objects for some criteria.
 
 ## Design Considerations
 
-Simple factory will in turn may use other design pattern like builder to construct objects.
-In case you want to specialize your simple factory in subclasses, you need factory method design pattern instead.
+Creator hierarchy in factory method pattern reflects the product hierarchy. We typically end up with a concrete creator
+per object type.
 
-## Example of a Simple Factory
+Template method design pattern often makes use of factory methods.
 
-The java.text.NumberFormat class has getInstance method, which is an example of simple factory.
+Another creational design pattern called "abstract factory" makes use of factory method pattern.
 
-## Compare & Contrast with Factory Method Pattern
+## Examples of a Factory Method
 
-Simple Factory ;
+java.util.Collection has an abstract method called iterator(). This method is an example of a factory method.
 
-- We simply move our instantiation logic away from client code. Typically, in a static method.
-- Simple Factory knows about all classes whose objects it can create.
-
-Factory method ;
-
-- Factory method is more useful when you want to delegate object creation to subclasses.
-- In Factory method we don't know in advance about all product subclasses.
+Remember, the most defining characteristic of factory method pattern is "subclasses providing the actual instance".
 
 ## Pitfalls
 
-The criteria used by simple factory to decide which object to instantiate can get more convoluted/complex over time. If
-you find yourself in such situation then use factory method design pattern.
+More complex to implement. More classes involved and need unit testing.
+You have to start with Factory method design pattern from the beginning. It's not easy to refactor existing code into
+factory method pattern.
+Sometimes this pattern forces you to subclass just to create appropriate instance.
 
-## In A Hurry Summary
+## In a Hurry Summary
 
-Simple factory encapsulates away the object instantiation in a separate method.
-We can pass an argument to this method to indicate product type and/or additional arguments to help create object.
+Use factory method pattern when you want to delegate object instantiation to subclasses, you'd want to do this when you
+have "product" inheritance hierarchy and possibility of future additions to that.
