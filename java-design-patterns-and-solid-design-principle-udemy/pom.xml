@@ -23,6 +23,7 @@
         <module>builder-design-pattern-v2-inner-class</module>
         <module>simple-factory-design-pattern</module>
         <module>factory-method-design-pattern</module>
+        <module>prototype-design-pattern</module>
     </modules>
 
     <dependencies>
@@ -37,6 +38,15 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.13.2</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>19-ea+7</version>
+        </dependency>
+
+
     </dependencies>
 
 
