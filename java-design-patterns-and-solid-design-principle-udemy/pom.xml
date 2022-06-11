@@ -25,6 +25,7 @@
         <module>factory-method-design-pattern</module>
         <module>prototype-design-pattern</module>
         <module>abstract-factory-design-pattern</module>
+        <module>singleton-design-pattern</module>
     </modules>
 
     <dependencies>
