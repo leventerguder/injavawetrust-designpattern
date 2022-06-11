@@ -25,7 +25,7 @@ We start by creating a class which will be a prototype.
 - clone() method is protected in Object class and must be overridden to be public to be callable from outside the class.
 - Cloneable is a marker interface , an indication that the class supports cloning.
 
-## Design Condiderations
+## Design Considerations
 
 - Prototype are useful when you have large objects where majority of state is unchanged between instances and you can
   easily identify that state.
