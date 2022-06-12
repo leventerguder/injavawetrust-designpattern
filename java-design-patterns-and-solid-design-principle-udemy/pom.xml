@@ -26,6 +26,7 @@
         <module>prototype-design-pattern</module>
         <module>abstract-factory-design-pattern</module>
         <module>singleton-design-pattern</module>
+        <module>object-pool-design-pattern</module>
     </modules>
 
     <dependencies>
