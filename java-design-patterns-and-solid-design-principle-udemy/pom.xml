@@ -27,6 +27,7 @@
         <module>abstract-factory-design-pattern</module>
         <module>singleton-design-pattern</module>
         <module>object-pool-design-pattern</module>
+        <module>adapter-design-pattern</module>
     </modules>
 
     <dependencies>
