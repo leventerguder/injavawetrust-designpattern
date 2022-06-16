@@ -29,6 +29,7 @@
         <module>object-pool-design-pattern</module>
         <module>adapter-design-pattern</module>
         <module>bridge-design-pattern</module>
+        <module>decorator-design-pattern</module>
     </modules>
 
     <dependencies>
@@ -49,6 +50,12 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>19-ea+7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.9</version>
         </dependency>
 
 
