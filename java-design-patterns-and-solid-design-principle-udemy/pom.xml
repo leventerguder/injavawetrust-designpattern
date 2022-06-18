@@ -31,6 +31,7 @@
         <module>bridge-design-pattern</module>
         <module>decorator-design-pattern</module>
         <module>composite-design-pattern</module>
+        <module>facade-design-pattern</module>
     </modules>
 
     <dependencies>
