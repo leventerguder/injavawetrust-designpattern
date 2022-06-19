@@ -32,6 +32,7 @@
         <module>decorator-design-pattern</module>
         <module>composite-design-pattern</module>
         <module>facade-design-pattern</module>
+        <module>flyweight-design-pattern</module>
     </modules>
 
     <dependencies>
