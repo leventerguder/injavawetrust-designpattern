@@ -35,6 +35,7 @@
         <module>flyweight-design-pattern</module>
         <module>proxy-design-pattern</module>
         <module>chain-of-responsibility-design-pattern</module>
+        <module>command-design-pattern</module>
     </modules>
 
     <dependencies>
