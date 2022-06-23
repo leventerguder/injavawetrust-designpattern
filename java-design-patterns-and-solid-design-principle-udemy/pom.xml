@@ -36,6 +36,7 @@
         <module>proxy-design-pattern</module>
         <module>chain-of-responsibility-design-pattern</module>
         <module>command-design-pattern</module>
+        <module>interpreter-design-pattern</module>
     </modules>
 
     <dependencies>
