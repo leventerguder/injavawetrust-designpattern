@@ -38,6 +38,7 @@
         <module>command-design-pattern</module>
         <module>interpreter-design-pattern</module>
         <module>mediator-design-pattern</module>
+        <module>iterator-design-pattern</module>
     </modules>
 
     <dependencies>
