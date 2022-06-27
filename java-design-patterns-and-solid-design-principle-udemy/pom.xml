@@ -40,6 +40,7 @@
         <module>mediator-design-pattern</module>
         <module>iterator-design-pattern</module>
         <module>memento-design-pattern</module>
+        <module>observer-design-pattern</module>
     </modules>
 
     <dependencies>
