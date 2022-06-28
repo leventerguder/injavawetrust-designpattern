@@ -41,6 +41,7 @@
         <module>iterator-design-pattern</module>
         <module>memento-design-pattern</module>
         <module>observer-design-pattern</module>
+        <module>state-design-pattern</module>
     </modules>
 
     <dependencies>
