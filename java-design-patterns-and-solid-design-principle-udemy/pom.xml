@@ -42,6 +42,7 @@
         <module>memento-design-pattern</module>
         <module>observer-design-pattern</module>
         <module>state-design-pattern</module>
+        <module>strategy-design-pattern</module>
     </modules>
 
     <dependencies>
