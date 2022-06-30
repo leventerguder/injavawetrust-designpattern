@@ -43,6 +43,7 @@
         <module>observer-design-pattern</module>
         <module>state-design-pattern</module>
         <module>strategy-design-pattern</module>
+        <module>template-method-design-pattern</module>
     </modules>
 
     <dependencies>
