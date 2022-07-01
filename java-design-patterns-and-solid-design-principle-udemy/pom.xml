@@ -44,6 +44,7 @@
         <module>state-design-pattern</module>
         <module>strategy-design-pattern</module>
         <module>template-method-design-pattern</module>
+        <module>visitor-design-pattern</module>
     </modules>
 
     <dependencies>
