@@ -45,6 +45,7 @@
         <module>strategy-design-pattern</module>
         <module>template-method-design-pattern</module>
         <module>visitor-design-pattern</module>
+        <module>null-object-design-pattern</module>
     </modules>
 
     <dependencies>
